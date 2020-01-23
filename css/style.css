@@ -6,3 +6,6 @@ body {
     max-width: 70%;
     margin: 0 auto;
 }
+.content__text {
+    text-align: center;
+}
