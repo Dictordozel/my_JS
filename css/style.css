@@ -11,7 +11,9 @@ body {
     margin: 0 auto;
 }
 .content__text {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .content__title {
     text-transform: uppercase;
@@ -22,4 +24,5 @@ body {
 .content__info {
     font-size: 18px;
     line-height: 24px;
+    text-align: center;
 }
