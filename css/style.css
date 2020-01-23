@@ -2,3 +2,7 @@ body {
     background-color: #000000;
     color: #ffffff;
 }
+.container {
+    max-width: 70%;
+    margin: 0 auto;
+}
