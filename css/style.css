@@ -2,10 +2,19 @@ body {
     background-color: #000000;
     color: #ffffff;
 }
+
+.content {
+    margin-top: 150px;
+}
 .container {
     max-width: 70%;
     margin: 0 auto;
 }
 .content__text {
     text-align: center;
+}
+.content__title {
+    text-transform: uppercase;
+    font-size: 50px;
+    letter-spacing: 2px;
 }
