@@ -1,8 +1,7 @@
 let money = 150000;
 let income = 'шантаж, вымогательство, разбой';
 let addExpenses = 'секс, наркотики, рок-н-ролл';
-let deposit = 4 > 3;
-// console.log(deposit);
+let deposit = true;
 let mission = 1000000;
 let period = 12;
 
