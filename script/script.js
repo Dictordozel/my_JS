@@ -1,82 +1,38 @@
-let myVar; // Объявление переменной
+// STRING///////////////////////////////////////////
 
-//  Примитивные типы данных //
-myVar = 10;
-console.log(typeof myVar);
-
-myVar = 'My variant';
-console.log(typeof myVar);
-
-myVar = true;
-console.log(typeof myVar);
-
-myVar = null;
-console.log(typeof myVar);
-
-myVar = undefined;
-console.log(typeof myVar);
-
-myVar = Symbol();
-console.log(typeof myVar);
-
-// Тип данных Oblect
-// myVar = {};
+// let myStr = '\t "Hello" my \n friends';
+// console.log(myStr);
+// let myStr2 = '\t Hello "my" \n \t friends';
+// console.log(myStr2);
+// let myStr3 = 'Hello my \n \t "friends"';
+// console.log(myStr3);
 
 
-// Объектные типы данных
-// let myArr = []; //Массив
-// let regExp = /w+/g; // Регулярные выражения
-// let func = function(){}; // Функции
-// let error = Error('Error message'); // Ошибки
-// let date = Date(); // Дата
+//МЕТОДЫ И СВОЙСТВА//////////////////////////////////////
 
-// let arr = [1, 2, 3, 5, 7, 9];
-// alert('myArr [5] = ' + arr[5]);
+let str = 'Hello My Friends!';
+console.log('В строке ' + str.length + ' символов');
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
 
-// let myTrue = true;
-// let myFalse = false;
+// console.log(str.charAt(0));
+// console.log(str.charAt(16));
 
-// console.log(myTrue || true);
-// console.log(myTrue || false);
-// console.log(myFalse || false);
+console.log(str[16]);
 
-// console.log(myTrue && true);
-// console.log(myTrue && false);
-// console.log(myFalse && false);
+console.log(str.substring(6)); // с 6-го символа
+console.log(str.substring(9, 14)); // с 9-го по 14-й
+console.log(str.slice(11)); // с 11-го символа до конца
+console.log(str.slice(-10)); // 10 символов с конца
+console.log(str.substr(3, 8)); // с какого символа, сколько знаков
 
-// Присваивание
-// let n = 15;
-// // n = n + 3;
-// n += 3;
-// console.log('n = ', n);
-// // n = n - 6;
-// n -= 6;
-// console.log('n = ', n);
-// // n = n / 3;
-// n /= 3;
-// console.log('n = ', n);
+console.log(str.indexOf('Friends')); // возвращает индекс первой буквы слова
 
-// Операторы сравнения
-// console.log(3 > 2);
-// console.log(3 < 2);
-// console.log(5 >= 3);
-// console.log(10 <= 3);
-// console.log(5 === 5);
-// console.log(5 !== 6);
-// console.log(5 == '5');
-// console.log(5 !== '5');
-// console.log(5 != '5');
+console.log(str.indexOf('d')); // индекс символа (ближайший)
 
-console.log(Math.pow(5, 3));
+console.log(str.replace('Friends', 'Slaves')); // Меняет строку
 
-console.log(5 ** 4);
+console.log(str.split(' '));
 
-// Новый оператор возведения в степень
-let x = Math.pow(5, 3); // старый
-let y = 5 ** 3;         // новый
-console.log(x === y);
-
-// проверка на целое число
-
-console.log(Number.isInteger(5));
-console.log(Number.isInteger(5.6));
+let myStr = 'apple, kiwi, orange, cherry';
+console.log(myStr.split(', '));
