@@ -18,4 +18,4 @@ console.log(addExpenses.split(''));
 let budgetDay;
 budgetDay = money / 30;
 console.log('Предпочтительный доход - ' + budgetDay + 
-' рублей в месяц');
+' рублей в день');
