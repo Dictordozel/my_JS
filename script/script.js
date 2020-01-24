@@ -17,6 +17,6 @@ console.log('Цель - заработать ' + mission + ' долларов');
 console.log(addExpenses.toUpperCase(), addExpenses.split(', '));
 console.log(addExpenses.split(''));
 let budgetDay;
-budgetDay = money;
+budgetDay = money / 30;
 console.log('Предпочтительный доход - ' + budgetDay + 
 ' рублей в месяц');
