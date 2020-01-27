@@ -30,12 +30,27 @@ console.log('Бюджет на день ' + budgetDay +
 ' рублей');
 
 
-if(budgetDay > 1200) {
-    console.log('У вас высокий уровень дохода');
-}   else if((budgetDay < 1200) && (budgetDay > 600)) {
-    console.log('У вас средний уровень дохода');
-}   else if((budgetDay > 0) && (budgetDay < 600)) {
-    console.log('К сожалению вы - нищеброд');
-}   else {
-    console.log('Что-то пошло не так');
-}
+// if(budgetDay > 1200) {
+//     console.log('У вас высокий уровень дохода');
+// }   else if((budgetDay < 1200) && (budgetDay > 600)) {
+//     console.log('У вас средний уровень дохода');
+// }   else if((budgetDay > 0) && (budgetDay < 600)) {
+//     console.log('К сожалению вы - нищеброд');
+// }   else {
+//     console.log('Что-то пошло не так');
+// }
+
+switch (budgetDay) {
+    case (budgetDay > 1200):
+        console.log('У вас высокий уровень дохода');
+        //break;
+    case ((budgetDay < 1200) && (budgetDay > 600)):
+        console.log('У вас средний уровень дохода');
+        //break;
+    case ((budgetDay > 0) && (budgetDay < 600)):
+        console.log('К сожалению вы - нищеброд');
+        //break;
+    case (budgetDay <= 0):
+        console.log('Что то пошло не так');
+        //break;
+    }
