@@ -1,12 +1,12 @@
-let money = +prompt('Ваш месячный доход?');
+let money = +prompt('Ваш месячный доход?', 40000);
 let mission = 150000;
 let period = 6;
-let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
+let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую', 'одежда, проезд, досуг');
 let deposit = confirm('Есть ли у вас депозит в банке?');
-let expenses1 = prompt('Введите обязательную статью расходов');
-let amount1 = parseInt(prompt('Во сколько это обойдется?'));
-let expenses2 = prompt('Введите обязательную статью расходов');
-let amount2 = parseInt(prompt('Во сколько это обойдется?'));
+let expenses1 = prompt('Введите обязательную статью расходов', 'квартплата');
+let amount1 = parseInt(prompt('Во сколько это обойдется?', 10000));
+let expenses2 = prompt('Введите обязательную статью расходов', 'алименты');
+let amount2 = parseInt(prompt('Во сколько это обойдется?', 20000));
 
 let budgetMonth = (money - (amount1 + amount2));
 
@@ -38,3 +38,12 @@ if(budgetDay > 1200) {
 }   else {
     console.log('Что-то пошло не так');
 }
+
+let getExpensesMonth = function() {
+    return amount1 + amount2;
+};
+console.log(getExpensesMonth()); 
+
+
+
+
