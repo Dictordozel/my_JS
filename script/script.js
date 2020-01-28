@@ -31,15 +31,11 @@ function getTargetMonth() {
 
 let source = Math.ceil(getTargetMonth());
 
+let budgetDay = Math.floor(accumulatedMonth / 30);
+
+
 console.log('Вам понадобится ' + source + ' месяцев');
 console.log('Бюджет на месяц ' + accumulatedMonth);
-
-function getbudgetDay() {
-    return Math.floor(accumulatedMonth / 30);
-}
-
-let budgetDay = getbudgetDay();
-
 console.log('Бюджет на день ' + budgetDay + ' рублей');
 
 
