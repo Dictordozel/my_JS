@@ -1,7 +1,6 @@
 let money = +prompt('Ваш месячный доход?');
 let mission = 150000;
 let period = 6;
-let income = 'шантаж, вымогательство, разбой';
 let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
 let deposit = confirm('Есть ли у вас депозит в банке?');
 let expenses1 = prompt('Введите обязательную статью расходов');
@@ -30,27 +29,12 @@ console.log('Бюджет на день ' + budgetDay +
 ' рублей');
 
 
-// if(budgetDay > 1200) {
-//     console.log('У вас высокий уровень дохода');
-// }   else if((budgetDay < 1200) && (budgetDay > 600)) {
-//     console.log('У вас средний уровень дохода');
-// }   else if((budgetDay > 0) && (budgetDay < 600)) {
-//     console.log('К сожалению вы - нищеброд');
-// }   else {
-//     console.log('Что-то пошло не так');
-// }
-
-switch (budgetDay) {
-    case (budgetDay > 1200):
-        console.log('У вас высокий уровень дохода');
-        //break;
-    case ((budgetDay < 1200) && (budgetDay > 600)):
-        console.log('У вас средний уровень дохода');
-        //break;
-    case ((budgetDay > 0) && (budgetDay < 600)):
-        console.log('К сожалению вы - нищеброд');
-        //break;
-    case (budgetDay <= 0):
-        console.log('Что то пошло не так');
-        //break;
-    }
+if(budgetDay > 1200) {
+    console.log('У вас высокий уровень дохода');
+}   else if((budgetDay < 1200) && (budgetDay > 600)) {
+    console.log('У вас средний уровень дохода');
+}   else if((budgetDay > 0) && (budgetDay < 600)) {
+    console.log('К сожалению вы - нищеброд');
+}   else {
+    console.log('Что-то пошло не так');
+}
