@@ -1,7 +1,7 @@
 let money = +prompt('Ваш месячный доход?', 50000);
 let mission = 150000;
 let period = 6;
-let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую', 'одежда, проезд, досуг');
+let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую', 'одежда, проезд, досуг, питание');
 let deposit = confirm('Есть ли у вас депозит в банке?');
 let expenses1 = prompt('Введите обязательную статью расходов', 'квартплата');
 let amount1 = parseInt(prompt('Во сколько это обойдется?', 10000));
@@ -34,7 +34,12 @@ let source = Math.ceil(getTargetMonth());
 console.log('Вам понадобится ' + source + ' месяцев');
 console.log('Бюджет на месяц ' + accumulatedMonth);
 
-let budgetDay = Math.floor(accumulatedMonth / 30);
+function getbudgetDay() {
+    return Math.floor(accumulatedMonth / 30);
+}
+
+let budgetDay = getbudgetDay();
+
 console.log('Бюджет на день ' + budgetDay + ' рублей');
 
 
