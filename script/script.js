@@ -30,16 +30,21 @@ console.log(addExpenses.toLowerCase().split(', '));
 
 
 let getExpensesAmount = function() {
+    
     let sum = 0;
+    let q;
 
     for(let i = 0; i < 3; i++) {
 
         expenses = prompt('Введите обязательную статью расходов');
-            
-        do { 
-        sum += prompt('Во сколько это обойдется?');
+
+        do {
+        q = prompt('Во сколько это обойдется?');
         }
-        while(!isNumber(sum)); 
+        while (!isNumber(q));
+        sum += +q;
+        
+         
     }
         
         
