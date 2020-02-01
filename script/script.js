@@ -1,6 +1,11 @@
+///////////////////////////// Проверка на число   /////////////////////////////
+
 let isNumber = function(n) {
     return !isNaN(parseFloat(n)) && isFinite(n); 
 };
+
+///////////////////////////////////////////////////////////////////////////////
+
 
 let money;
 
@@ -13,19 +18,43 @@ let start = function() {
 };
 start();
 
-let mission = 150000;
-let period = 6;
-let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
-let deposit = confirm('Есть ли у вас депозит в банке?');
-let expenses = [];
+
+let appData = {
+    income: {},
+    addIncome: [],
+    expenses: {},
+    addExpenses: [],
+    deposit: false,
+    mission: 150000,
+    period: 6,
+    budget: money,
+    budgetDay: 0,
+    budgetMonth: 0,
+    expensesMonth: 0,
+    asking:function() {
+
+        let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
+        appData.addExpenses = addExpenses.toLowerCase().split(', ');
+        appData.deposit = confirm('Есть ли у вас депозит в банке?');
+        let expenses = [];
+
+    }
+};
 
 
+// let showTypeof = function(item) {
+//     console.log(typeof item);
+// };
+// showTypeof(money);
+// showTypeof(appData.income);
+// showTypeof(appData.deposit);
 
-console.log(typeof money, typeof income, typeof deposit);
+
+// console.log(typeof money, typeof appData.income, typeof appData.deposit);
 console.log('Длина строки составляет ' + addExpenses.length + ' символов');
 console.log('Период равен ' + period + ' месяцев');
 console.log('Цель - заработать ' + mission + ' рублей');
-console.log(addExpenses.toLowerCase().split(', '));
+// console.log(addExpenses.toLowerCase().split(', '));
 
 
 
@@ -43,7 +72,6 @@ let getExpensesAmount = function() {
         }
         while (!isNumber(q));
         sum += +q;
-        
          
     }
         
@@ -64,7 +92,7 @@ let getAccumulatedMonth = function() {
 let accumulatedMonth = getAccumulatedMonth();
 
 let getTargetMonth = function() {
-    return mission / accumulatedMonth;
+    return appData.mission / accumulatedMonth;
     
 };
 
@@ -79,7 +107,7 @@ let budgetDay = function() {
 if(source() < 0) {
     console.log('Цель не будет достигнута');
 } else {
-console.log('Вам понадобится ' + source() + ' месяцев');
+    console.log('Вам понадобится ' + source() + ' месяцев');
 }
 
 console.log('Бюджет на месяц ' + accumulatedMonth);
