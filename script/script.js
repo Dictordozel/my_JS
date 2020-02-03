@@ -111,7 +111,6 @@ appData.getTargetMonth();
 
 
 
-
 for(let key in appData) {
-    console.log(appData[key]);
+    console.log('Наша программа включает в себя данные: ' + appData[key]);
 }
