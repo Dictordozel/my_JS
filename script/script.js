@@ -46,21 +46,30 @@ let appData = {
 
             let title = prompt('Введите обязательную статью расходов');
             appData.expenses[title] = prompt('Во сколько это обойдется?', 10000); // удалить ,10000 
+            
         }
 
         
-        // for(let i = 0; i < 3; i++) {
 
-        //     let title = prompt('Введите обязательную статью расходов');
-            
-        //     let q;
 
-        //     do {
-        //     q = prompt('Во сколько это обойдется?', 10000); // удалить ,10000
-        //     }
-        //     while (!isNumber(q)); 
-        //     appData.expenses[title] += +q; 
-        // }
+/////////  Fucking do while !!!!!!!  /////////////////////////////////////////////////////////
+
+        
+    //     for(let i = 0; i < 3; i++) {
+
+    //         let title = prompt('Введите обязательную статью расходов');
+    //         console.log('>>>>>>>>>>>>>>>>  appData.expenses  >>>>>>>>>>>' + title);
+    //         let q;
+
+    //         do {
+    //         q = prompt('Во сколько это обойдется?');
+    //         }
+    //         while (!isNumber(q)); 
+    //         appData.expenses[title] += q;
+    //         console.log('>>>>>>>>>>>>>>>>  typeof q  >>>>>>>>>>>>>>>>>>>>>>>>>' + typeof q);
+    //         console.log('>>>>>>>>>>>>>>>>  q  >>>>>>>>>>>>>>>>>>>>>>>>>' + q);
+    //         console.log('>>>>>>>>>>>>>>>>  typeof appData.expenses  >>>>>>>>>>>' + typeof title); 
+    //     }
     },
 
 //////////////////////////////////////////////////////////////////
@@ -78,8 +87,7 @@ let appData = {
             console.log('Цель не будет достигнута');
         } else {
             console.log('Вам понадобится ' + targetMonth + ' месяцев');
-        }
-        
+        }    
           
     },
 
@@ -101,8 +109,8 @@ let appData = {
         console.log(appData.expenses[key]);
         appData.expensesMonth += +appData.expenses[key];     
         }
-        console.log('Расходы за месяц:' + appData.expensesMonth);
-    }
+
+    }, 
 
 };
 
@@ -111,3 +119,8 @@ appData.getExpensesMonth();
 appData.getBuget();
 appData.getStatusIncome();
 appData.getTargetMonth();
+
+for(let key in appData) {
+    console.log(appData[key]);
+    appData += appData[key];     
+}
