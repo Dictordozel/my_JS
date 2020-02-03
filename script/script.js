@@ -35,15 +35,18 @@ let appData = {
     expensesMonth: 0,
     asking: function() {
 
+        if(true) {
+            let itemIncome = prompt('Какой у вас дополнительный заработок?', 'Пеку булки');
+            let cashIncome = prompt('Сколько вы зарабатываете на этом в месяц? ', '');
+            appData.income[itemIncome] = cashIncome;
+        }
+
         let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую', 'проезд, кино, мороженое'); // удалить , 'проезд', 'кино', 'мороженое' 
-        
         appData.addExpenses = addExpenses.toLowerCase().split(', ');
-        
         appData.deposit = confirm('Есть ли у вас депозит в банке?');
 
-
         
-        for(let i = 0; i < 3; i++) {
+        for(let i = 0; i < 2; i++) {
 
             let title = prompt('Введите обязательную статью расходов');
             let q;
