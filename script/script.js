@@ -42,33 +42,20 @@ let appData = {
         appData.deposit = confirm('Есть ли у вас депозит в банке?');
 
 
+        
         for(let i = 0; i < 3; i++) {
 
             let title = prompt('Введите обязательную статью расходов');
-            appData.expenses[title] = prompt('Во сколько это обойдется?'); 
-            
+            let q;
+
+            do {
+            q = prompt('Во сколько это обойдется?');
+            }
+            while (!isNumber(q)); 
+            appData.expenses[title] = q; 
         }
-
-        
-
-
-/////////  Fucking do while !!!!!!!  /////////////////////////////////////////////////////////
-
-        
-    //     for(let i = 0; i < 3; i++) {
-
-    //         let title = prompt('Введите обязательную статью расходов');
-    //         let q;
-
-    //         do {
-    //         q = prompt('Во сколько это обойдется?');
-    //         }
-    //         while (!isNumber(q)); 
-    //         appData.expenses[title] += q; 
-    //     }
     },
 
-//////////////////////////////////////////////////////////////////
 
     getBuget: function() {
         appData.budgetMonth = appData.budget - appData.expensesMonth;
@@ -122,7 +109,9 @@ appData.getBuget();
 appData.getStatusIncome();
 appData.getTargetMonth();
 
-// for(let key in appData) {
-//     console.log(appData[key]);
-//     appData += appData[key];     
-// }
+
+
+
+for(let key in appData) {
+    console.log(appData[key]);
+}
