@@ -55,23 +55,28 @@ let appData = {
                 appData.income[cashIncome] = howMonth;
 
         }
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
         let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую', 'проезд, кино, мороженое'); // удалить , 'проезд', 'кино', 'мороженое' 
 
-        appData.addExpenses = addExpenses.toLowerCase().trim().split(','); // split(', ');
+        appData.addExpenses = addExpenses.toLowerCase().trim().split(', ');
+        
+        //console.log(appData.addExpenses);
+        //console.log(typeof appData.addExpenses);
 
 
+        
 
-
-       
-
-        console.log(appData.addExpenses);
-        console.log(typeof appData.addExpenses);
 
 
         for(let item of appData.addExpenses) {
-            console.log(item.trim().split('')); 
+            newItem = item.toUpperCase(); 
         }
+        console.log(newItem);
+
+      
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
         appData.deposit = confirm('Есть ли у вас депозит в банке?');
