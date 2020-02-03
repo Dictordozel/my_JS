@@ -27,15 +27,17 @@ let appData = {
     expenses: {},
     addExpenses: [],
     deposit: false,
+    percentDeposit: 0,
+    moneyDeposit: 0,
     mission: 150000,
-    period: 0,
+    period: 3,
     budget: money,
     budgetDay: 0,
     budgetMonth: 0,
     expensesMonth: 0,
     asking: function() {
 
-        if(true) {
+        if(confirm('Есть ли у вас дополнителный источник заработка?')) {
             let itemIncome = prompt('Какой у вас дополнительный заработок?', 'Пеку булки');
             let cashIncome = prompt('Сколько вы зарабатываете на этом в месяц? ', '');
             appData.income[itemIncome] = cashIncome;
@@ -100,6 +102,13 @@ let appData = {
 
     },
 
+    getInfoDeposit: function() {
+        if(appData.deposit) {
+            appData.percentDeposit = prompt('Какой годовой процент?' + '10');
+            appData.moneyDeposit = prompt('Какая сумма депозита?', '15000');
+        }
+    }
+
     
 
 };
@@ -115,5 +124,6 @@ appData.getTargetMonth();
 
 
 for(let key in appData) {
-    console.log('Наша программа включает в себя данные: ' + appData[key]);
+    console.log('Наша программа включает в себя данные: ');
+    console.log(appData[key]);
 }
