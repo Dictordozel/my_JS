@@ -39,38 +39,39 @@ let appData = {
 
         if(confirm('Есть ли у вас дополнителный источник заработка?')) {
 
-            let itemIncome, wtf;
-
-            do {
-                wtf = prompt('Какой у вас дополнительный заработок?', 'Пеку булки');
+           do {
+                itemIncome = prompt('Какой у вас дополнительный заработок?', 'Пеку булки');
                 }
-                while (isNumber(wtf)); 
-                appData.income[itemIncome] = wtf;
+                while (!isNaN(itemIncome) || itemIncome === '' || itemIncome === null); 
+                appData.income[itemIncome] = itemIncome;
 
-            let cashIncome, howMonth;
             do {
-            howMonth = prompt('Сколько вы зарабатываете на этом в месяц? ', '15000');
+            cashIncome = prompt('Сколько вы зарабатываете на этом в месяц? ', '15000');
         }
-            while (!isNumber(howMonth)); 
-                appData.income[cashIncome] = howMonth;
+            while (!isNumber(cashIncome)); 
+                appData.income[itemIncome] = cashIncome;
+
+
 
         }
         /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-        let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую', 'проезд, кино, мороженое'); // удалить , 'проезд', 'кино', 'мороженое' 
+        do {
+            addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую', 'проезд, кино, мороженое'); // удалить , 'проезд', 'кино', 'мороженое'
+            }
+            while (!isNaN(addExpenses) || addExpenses === '' || addExpenses === null);
 
         appData.addExpenses = addExpenses.toLowerCase().trim().split(', ');
 
 
+        
+      
         for(let item of appData.addExpenses) {
-            console.log(item.charAt(0).toUpperCase() + item.slice(1));
+        console.log(item.charAt(0).toUpperCase() + item.slice(1));
         }
+        
 
-
-        // for(let key in appData.addExpenses) {
-        //     console.log(appData.addExpenses[key].charAt(0).toUpperCase() + appData.addExpenses[key].slice(1));     
-        //     }
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -81,14 +82,13 @@ let appData = {
         
         for(let i = 0; i < 2; i++) {
 
-            let title;
             do {
             title = prompt('Введите обязательную статью расходов');
         }
-        while (isNumber(title));
+        while (!isNaN(title) || title === '' || title === null);
             appData.expenses[title] = title;
             
-            let howMach;
+
             do {
             howMach = prompt('Во сколько это обойдется?');
             }
