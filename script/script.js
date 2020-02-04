@@ -61,21 +61,18 @@ let appData = {
         let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую', 'проезд, кино, мороженое'); // удалить , 'проезд', 'кино', 'мороженое' 
 
         appData.addExpenses = addExpenses.toLowerCase().trim().split(', ');
-        
-        //console.log(appData.addExpenses);
-        //console.log(typeof appData.addExpenses);
-
-
-        
-
 
 
         for(let item of appData.addExpenses) {
-            newItem = item.toUpperCase(); 
+            console.log(item.charAt(0).toUpperCase() + item.slice(1));
         }
-        console.log(newItem);
 
-      
+
+        // for(let key in appData.addExpenses) {
+        //     console.log(appData.addExpenses[key].charAt(0).toUpperCase() + appData.addExpenses[key].slice(1));     
+        //     }
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -84,7 +81,12 @@ let appData = {
         
         for(let i = 0; i < 2; i++) {
 
-            let title = prompt('Введите обязательную статью расходов');
+            let title;
+            do {
+            title = prompt('Введите обязательную статью расходов');
+        }
+        while (isNumber(title));
+            appData.expenses[title] = title;
             
             let howMach;
             do {
