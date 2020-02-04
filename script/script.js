@@ -52,7 +52,6 @@ let appData = {
                 appData.income[itemIncome] = cashIncome;
 
 
-
         }
         /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -71,7 +70,6 @@ let appData = {
         console.log(item.charAt(0).toUpperCase() + item.slice(1));
         }
         
-
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -131,7 +129,6 @@ let appData = {
     getExpensesMonth: function() {
     
         for(let key in appData.expenses) {
-        console.log(appData.expenses[key]);
         appData.expensesMonth += +appData.expenses[key];     
         }
         console.log('Расходы за месяц:' + appData.expensesMonth);
