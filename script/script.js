@@ -53,7 +53,7 @@ let appData = {
 
 
         }
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
         do {
@@ -65,40 +65,17 @@ let appData = {
         
         //console.log(appData.addExpenses);    
             
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     
-// let 
-//     let letters = appData.addExpenses;
-//     let upperLet = letters.charAt(0).toUpperCase();
-//     letters = upperLet;
-//     let lowStr = appData.addExpenses.slice(1);
-//     letters += lowStr;
-
-//     console.log(letters); 
-
-// const a = appData.addExpenses.map(function(item){
-//     return item.charAt(0).toUpperCase() + item.slice(1)
-//   }).join(',');
-  
-//   console.log(a);
+        for(i = 0; i < appData.addExpenses.length; i++) {
+        let item = appData.addExpenses[i].charAt(0).toUpperCase() + appData.addExpenses[i].slice(1);
+        appData.addExpenses[i] = item;   
+        }
+        console.log(appData.addExpenses);
 
 
-
-            
-        // for(i = 0; i < appData.addExpenses.length; i++) {
-        //     let letters = appData.addExpenses;
-        //     let upperLet = appData.addExpenses[i].charAt(0).toUpperCase();
-        //     letters[appData.addExpenses] = upperLet;
-        //     let lowStr = appData.addExpenses[i].slice(1);
-        //     letters [appData.addExpenses] += lowStr;
-
-        //     console.log(letters); 
-        // }
-
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
         appData.deposit = confirm('Есть ли у вас депозит в банке?');
