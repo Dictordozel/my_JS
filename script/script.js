@@ -98,7 +98,6 @@ let appData = {
         }
     },
 
-
     getBuget: function() {
         appData.budgetMonth = appData.budget - appData.expensesMonth;
         appData.budgetDay = Math.floor(appData.budgetMonth / 30);
@@ -112,8 +111,7 @@ let appData = {
             console.log('Цель не будет достигнута');
         } else {
             console.log('Вам понадобится ' + targetMonth + ' месяцев');
-        }
-        
+        }    
           
     },
 
@@ -162,13 +160,9 @@ let appData = {
 
     calcSavedMoney: function() {
         return appData.budgetMonth * appData.period;
-    }
-
-    
+    }    
 
 };
-
-
 
 appData.asking();
 appData.getInfoDeposit();
@@ -176,8 +170,6 @@ appData.getExpensesMonth();
 appData.getBuget();
 appData.getStatusIncome();
 appData.getTargetMonth();
-
-
 
 for(let key in appData) {
     console.log('Наша программа включает в себя данные: ' + key + ' - ' + appData[key]);
