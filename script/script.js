@@ -72,7 +72,7 @@ let appData = {
         let item = appData.addExpenses[i].charAt(0).toUpperCase() + appData.addExpenses[i].slice(1);
         appData.addExpenses[i] = item;   
         }
-        console.log(appData.addExpenses);
+        console.log(appData.addExpenses.join(', '));
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
