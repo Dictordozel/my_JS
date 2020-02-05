@@ -66,9 +66,11 @@ let appData = {
 
         
       
-        for(let item of appData.addExpenses) {
-        console.log(item.charAt(0).toUpperCase() + item.slice(1));
+        for(i = 0; i < appData.addExpenses.length; i++) {
+            let item = appData.addExpenses[i].charAt(0).toUpperCase() + appData.addExpenses[i].slice(1);
+            appData.addExpenses[i] = item;   
         }
+        console.log(appData.addExpenses);
         
 
 
